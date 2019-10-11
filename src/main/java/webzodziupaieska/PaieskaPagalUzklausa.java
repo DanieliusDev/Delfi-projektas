@@ -1,21 +1,66 @@
 package webzodziupaieska;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PaieskaPagalUzklausa {
 
-    public String paieska(String txt) {
-//        DelfiHtml dfh = new DelfiHtml();
 
-//        System.out.println(txt.split(" "));
-//        String srch =
-        //if (txt.startsWith("adform"))
-//            System.out.println(txt);
+    public static final String BEGINIMG = "<img class=\"img-responsive lazy\" data-src=\"";
 
-        System.out.println(txt.substring(txt.indexOf("class=\"CBarticleTitle\" >")));
+    public static final String ENDIMG = "\" src=\"";
 
-//        darbas su ciklu issikarpyti headerius, nuorodas, commentu sk, linka - kiekvieno straipsnio.
+    public static final String BEGINTITLE = "class=\"CBarticleTitle\" >";
+    public static final String ENDTITLE = "</a>";
+    public static final String HREFBEGIN = "<a href=\"";
+    public static final String HREFEND = "&amp;com=1\"";
 
-        return "";
+    public List<ArticleMetaData> paieska(String txt) {
+
+        HtmlTxt htmlTxt = new HtmlTxt(txt);
+
+        List<ArticleMetaData> dataList = new ArrayList<>();
+        ArticleMetaData data = null;
+        do {
+            data = cutArtData(htmlTxt);
+            if (data != null){
+                dataList.add(data);
+            }
+
+        } while (data != null);
+
+
+        return dataList;
+
+    }
+
+    private ArticleMetaData cutArtData(HtmlTxt txt) {
+        ArticleMetaData meta = new ArticleMetaData();
+        CutResult rez = cut(txt, BEGINIMG, ENDIMG);
+        if (!rez.isFound()) {
+            return null;
+        }
+
+        meta.setImg(rez.getTarget());
+        rez = cut(txt, BEGINTITLE, ENDTITLE);
+        meta.setTitle(rez.getTarget());
+        rez = cut(txt, HREFBEGIN, HREFEND);
+        meta.setLink(rez.getTarget());
+        return meta;
     }
 
 
+    private CutResult cut(HtmlTxt txt, String begin, String end) {
+        int beginInd = txt.getTxt().indexOf(begin);
+        if (beginInd < 0) {
+            return new CutResult();
+        }
+
+
+        txt.setTxt(txt.getTxt().substring(beginInd));
+
+
+
+        return new CutResult(txt, txt.getTxt().substring(begin.length(), txt.getTxt().indexOf(end)));
+    }
 }
