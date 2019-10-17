@@ -1,4 +1,6 @@
-package webzodziupaieska;
+package webzodziupaieska.funkcionalumas;
+
+import webzodziupaieska.duomenys.HtmlTxt;
 
 public class CutResult {
 

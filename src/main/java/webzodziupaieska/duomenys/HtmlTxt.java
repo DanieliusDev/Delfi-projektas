@@ -1,4 +1,4 @@
-package webzodziupaieska;
+package webzodziupaieska.duomenys;
 
 public class HtmlTxt {
 
