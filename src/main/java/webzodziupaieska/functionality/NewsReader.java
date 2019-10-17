@@ -3,7 +3,7 @@ package webzodziupaieska.functionality;
 import webzodziupaieska.data.NewsPapers;
 import webzodziupaieska.delfi.DelfiImpl;
 
-import java.util.Collection;
+import java.util.List;
 
 public class NewsReader extends DelfiImpl {
 
@@ -11,18 +11,22 @@ public class NewsReader extends DelfiImpl {
 DelfiImpl di = new DelfiImpl();
 ReaderDaikts rds = new ReaderDaikts();
 
-       Collection delfi = di.extractMetaData(rds.readContent("https://www.delfi.lt").toString());
-        for (Object strs: delfi) {
+       List<ArticleMetaData> delfi = di.extractMetaData(rds.readContent("https://www.delfi.lt").toString());
+        for (ArticleMetaData strs: delfi) {
             System.out.println(strs);
 
 
         switch (linkName) {
             case DELFI:
-                return   strs.toString();
+                System.out.println( strs.toString());
+                System.out.println();
+                break;
             case BBC:
-                return "";
+                System.out.println("");
+                break;
             case LRYTAS:
-                return "";
+                System.out.println( "");
+                break;
             default:
                 return "Page not valid";
 
