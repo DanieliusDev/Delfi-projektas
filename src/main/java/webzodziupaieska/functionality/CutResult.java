@@ -1,6 +1,6 @@
-package webzodziupaieska.funkcionalumas;
+package webzodziupaieska.functionality;
 
-import webzodziupaieska.duomenys.HtmlTxt;
+import webzodziupaieska.data.HtmlTxt;
 
 public class CutResult {
 

@@ -1,11 +1,11 @@
 package webzodziupaieska.ParserForWebs;
-import webzodziupaieska.funkcionalumas.ArticleMetaData;
-import webzodziupaieska.duomenys.HtmlTxt;
-import webzodziupaieska.funkcionalumas.CutResult;
-import webzodziupaieska.funkcionalumas.PaieskaPagalUzklausa;
+import webzodziupaieska.functionality.ArticleMetaData;
+import webzodziupaieska.data.HtmlTxt;
+import webzodziupaieska.functionality.CutResult;
+import webzodziupaieska.delfi.DelfiImpl;
 import java.util.ArrayList;
 import java.util.List;
-public class NewsParser extends PaieskaPagalUzklausa {
+public class NewsParser extends DelfiImpl {
 
     public static final String LINK_BEGINS_STR = " ";
     public static final String LINK_END_STR = " ";

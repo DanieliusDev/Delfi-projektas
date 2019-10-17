@@ -1,4 +1,4 @@
-package webzodziupaieska.funkcionalumas;
+package webzodziupaieska.functionality;
 
 import java.io.BufferedReader;
 import java.io.IOException;

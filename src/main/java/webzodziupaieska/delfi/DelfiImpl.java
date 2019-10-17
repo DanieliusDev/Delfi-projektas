@@ -1,11 +1,13 @@
-package webzodziupaieska.funkcionalumas;
+package webzodziupaieska.delfi;
 
-import webzodziupaieska.duomenys.HtmlTxt;
+import webzodziupaieska.data.HtmlTxt;
+import webzodziupaieska.functionality.ArticleMetaData;
+import webzodziupaieska.functionality.CutResult;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaieskaPagalUzklausa {
+public class DelfiImpl {
 
 //	public static final String ART_URL_START = "https://www.delfi.lt";
 	public static final String LINK_BEGINS_STR = "<a href=";
