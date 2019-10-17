@@ -11,6 +11,10 @@ public class CutResult {
     public CutResult() {
         this.found = false;
     }
+    
+    public CutResult(boolean found) {
+        this.found = found;
+    }
 
     public CutResult(HtmlTxt txt, String target) {
         this.txt = txt;
@@ -36,6 +40,11 @@ public class CutResult {
     public void setTarget(String target) {
         this.target = target;
     }
+
+	@Override
+	public String toString() {
+		return "Link: " + target;
+	}
 
 
 }

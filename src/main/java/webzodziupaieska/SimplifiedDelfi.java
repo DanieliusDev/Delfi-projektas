@@ -1,6 +1,6 @@
 package webzodziupaieska;
 
-import webzodziupaieska.duomenys.ArticleMetaData;
+import webzodziupaieska.funkcionalumas.ArticleMetaData;
 
 import java.util.List;
 

@@ -1,42 +1,27 @@
-package webzodziupaieska.duomenys;
+package webzodziupaieska.funkcionalumas;
 
 public class ArticleMetaData {
 
     private String img;
     private String title;
     private String link;
-    private String diffLink;
-    private String diffTitle;
+    private String comm;
 
-    public String getDiffTitle() {
-        return diffTitle;
+
+
+    public String getComm() {
+        return comm;
     }
 
-    public void setDiffTitle(String diffTitle) {
-        this.diffTitle = diffTitle;
+    public void setComm(String comm) {
+        this.comm = comm;
     }
-
-
-
-
-
-    public String getDiffLink() {
-        return diffLink;
-    }
-
-    public void setDiffLink(String diffLink) {
-        this.diffLink = diffLink;
-    }
-
-
 
 //    public ArticleMetaData(String img, String title, String link) {
 //        this.img = img;
 //        this.title = title;
 //        this.link = link;
 //    }
-
-
 
     public void setImg(String img) {
         this.img = img;
@@ -64,12 +49,9 @@ public class ArticleMetaData {
 
     @Override
     public String toString() {
-        return "ArticleMetaData{" +
-                "\nimg=" + img +
-                "\ntitle=" + title  +
-                "\nlink=" + link  +
-//                "\nLink2=" + diffLink+
-//                "\nTITLE2="+ diffTitle+
-                '}';
+        return    "Title: " + title +
+                "\nLink:  " + link  +
+                "\nPict:  " + img  ;
+//                "\n Comments: " + comm;
     }
 }
