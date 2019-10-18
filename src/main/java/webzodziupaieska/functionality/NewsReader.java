@@ -26,8 +26,6 @@ public class NewsReader extends DelfiParse {
 //    }
 
 
-
-
     public String generateWithContent(NewsPapers linkName) {
         DelfiParse delfiObj = new DelfiParse();
         ReaderDaikts readerObj = new ReaderDaikts();
@@ -39,8 +37,8 @@ Cia daroma yra per daug viename metode.
 Padaryti kad kvieciant Lryta paduotu Lryta, BBC butu BBC.
 */
 
-        List<ArticleMetaData> delfi = getListOfData(delfiObj, readerObj);
-        List<ArticleMetaData> lrytas = getListOfDataForLRytas(rytasObj, readerObj);
+        List<ArticleMetaData> delfi = getListOfDelfiData(delfiObj, readerObj);
+        List<ArticleMetaData> lrytas = getListOfLrytasData(rytasObj, readerObj);
 
         for (ArticleMetaData strs : delfi) {
 
@@ -50,7 +48,7 @@ Padaryti kad kvieciant Lryta paduotu Lryta, BBC butu BBC.
                     System.out.println();
                     break;
                 case LRYTAS:
-                    System.out.println("https://www.lrytas.lt");
+                    System.out.println(lrytas);
                     System.out.println("");
                     break;
                 case BBC:
@@ -63,11 +61,11 @@ Padaryti kad kvieciant Lryta paduotu Lryta, BBC butu BBC.
         return "";
     }
 
-    private List<ArticleMetaData> getListOfData(DelfiParse di, ReaderDaikts skaito) {
-        return di.extractMetaData(skaito.readContent("https://www.delfi.lt").toString());
+    private List<ArticleMetaData> getListOfDelfiData(DelfiParse di, ReaderDaikts skaito) {
+        return di.extractMeta(skaito.readContent(di.page()).toString());
     }
 
-    private List<ArticleMetaData> getListOfDataForLRytas(LRytasParse lr, ReaderDaikts skaito) {
-        return lr.extractMetaData(skaito.readContent("https://www.lrytas.lt").toString());
+    private List<ArticleMetaData> getListOfLrytasData(LRytasParse lr, ReaderDaikts skaito) {
+        return lr.extractMeta(skaito.readContent(lr.page()).toString());
     }
 }

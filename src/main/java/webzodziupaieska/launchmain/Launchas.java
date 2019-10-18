@@ -18,7 +18,7 @@ public class Launchas {
 
 
         DelfiParse di = new DelfiParse();
-        List<ArticleMetaData> visiStraipsniai = di.extractMetaData(new ReaderDaikts().readContent("https://www.delfi.lt").toString());
+        List<ArticleMetaData> visiStraipsniai = di.extractMeta(new ReaderDaikts().readContent("https://www.delfi.lt").toString());
         for (ArticleMetaData data : visiStraipsniai) {
             System.out.println(data);
             System.out.println();

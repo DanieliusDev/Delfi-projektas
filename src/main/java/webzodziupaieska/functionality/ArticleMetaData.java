@@ -38,9 +38,9 @@ public class ArticleMetaData {
     }
     @Override
     public String toString() {
-        return    "Title: " + title +
-                "\nLink:  " + link  +
-                "\nPict:  " + img  ;
+        return    title +
+                "\n" + link  +
+                "\n" + img  ;
 //                "\n Comments: " + comm;
     }
 }
