@@ -1,6 +1,4 @@
-package webzodziupaieska.functionality;
-
-import webzodziupaieska.data.HtmlTxt;
+package org.d.ccw.data;
 
 public class CutResult {
 

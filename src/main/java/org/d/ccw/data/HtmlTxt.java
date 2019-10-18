@@ -1,4 +1,4 @@
-package webzodziupaieska.data;
+package org.d.ccw.data;
 
 public class HtmlTxt {
 

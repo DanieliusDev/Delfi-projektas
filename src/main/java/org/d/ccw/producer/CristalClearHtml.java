@@ -1,6 +1,8 @@
-package webzodziupaieska.functionality;
+package org.d.ccw.producer;
 
-public class addTags {
+import org.d.ccw.data.ArticleMetaData;
+
+public class CristalClearHtml {
     public static final String LINK_BEGINS_STR = "<a href=";
     public static final String LINK_END_STR = ">Nuoroda i straipsni</a></p>";
     public static final String ART_STR_TAG = "<p>";

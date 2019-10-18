@@ -1,8 +1,8 @@
 package webzodziupaieska.delfi;
 
+import org.d.ccw.NewsReader;
+import org.d.ccw.data.NewsPapers;
 import org.junit.Test;
-import webzodziupaieska.data.NewsPapers;
-import webzodziupaieska.functionality.NewsReader;
 
 class DelfiParseTest {
     @Test

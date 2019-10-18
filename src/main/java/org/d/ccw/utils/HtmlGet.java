@@ -1,11 +1,11 @@
-package webzodziupaieska.functionality;
+package org.d.ccw.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class ReaderDaikts {
+public class HtmlGet {
 
 
     /**

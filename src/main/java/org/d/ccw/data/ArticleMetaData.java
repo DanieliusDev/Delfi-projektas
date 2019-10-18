@@ -1,4 +1,4 @@
-package webzodziupaieska.functionality;
+package org.d.ccw.data;
 
 public class ArticleMetaData {
 
