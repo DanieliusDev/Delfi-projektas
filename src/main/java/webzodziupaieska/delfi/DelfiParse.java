@@ -3,11 +3,12 @@ package webzodziupaieska.delfi;
 import webzodziupaieska.data.HtmlTxt;
 import webzodziupaieska.functionality.ArticleMetaData;
 import webzodziupaieska.functionality.CutResult;
+import webzodziupaieska.functionality.GlobalParserForAll;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DelfiParse {
+public class DelfiParse implements GlobalParserForAll {
 
 //	public static final String ART_URL_START = "https://www.delfi.lt";
 
@@ -23,12 +24,12 @@ public class DelfiParse {
 
 //    public static final String COM_ART_BEGIN = "nbsp;<a href=\"https://www.delfi.lt";
 //    public static final String COM_ART_END = "&amp;com=1";
-
+@Override
     public String page() {
         return "https://www.delfi.lt";
     }
 
-
+@Override
     public List<ArticleMetaData> extractMeta(String txt) {
 
         HtmlTxt htmlTxt = new HtmlTxt(txt);
@@ -43,7 +44,7 @@ public class DelfiParse {
         } while (data != null);
         return dataList;
     }
-
+@Override
     public ArticleMetaData cutArtData(HtmlTxt txt) {
         ArticleMetaData meta = new ArticleMetaData();
         CutResult rez = cut(txt, ART_LINK_START, ART_LINK_END);
@@ -61,7 +62,7 @@ public class DelfiParse {
 //        rez= cut(txt, COM_ART_BEGIN, COM_ART_END);
         return meta;
     }
-
+@Override
     public CutResult cut(HtmlTxt txt, String begin, String end) {
 
         // Begin
