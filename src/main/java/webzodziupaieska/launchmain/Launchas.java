@@ -1,6 +1,6 @@
-package webzodziupaieska.LaunchMain;
+package webzodziupaieska.launchmain;
 
-import webzodziupaieska.delfi.DelfiImpl;
+import webzodziupaieska.delfi.DelfiParse;
 import webzodziupaieska.functionality.ArticleMetaData;
 import webzodziupaieska.functionality.ReaderDaikts;
 
@@ -17,7 +17,7 @@ public class Launchas {
         //        sout( nr.generateWithContentOnly(WebNewsPage.LRYTAS));
 
 
-        DelfiImpl di = new DelfiImpl();
+        DelfiParse di = new DelfiParse();
         List<ArticleMetaData> visiStraipsniai = di.extractMetaData(new ReaderDaikts().readContent("https://www.delfi.lt").toString());
         for (ArticleMetaData data : visiStraipsniai) {
             System.out.println(data);

@@ -1,4 +1,4 @@
-package webzodziupaieska.LaunchMain;
+package webzodziupaieska.launchmain;
 
 import webzodziupaieska.data.NewsPapers;
 import webzodziupaieska.functionality.NewsReader;

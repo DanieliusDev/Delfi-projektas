@@ -7,7 +7,7 @@ import webzodziupaieska.functionality.CutResult;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DelfiImpl {
+public class DelfiParse{
 
 //	public static final String ART_URL_START = "https://www.delfi.lt";
 	public static final String LINK_BEGINS_STR = "<a href=";
