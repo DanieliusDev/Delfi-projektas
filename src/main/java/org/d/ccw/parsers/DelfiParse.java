@@ -1,16 +1,14 @@
 package org.d.ccw.parsers;
 
-import org.d.ccw.NewsReader;
 import org.d.ccw.data.ArticleMetaData;
 import org.d.ccw.data.CutResult;
 import org.d.ccw.data.HtmlTxt;
-import org.d.ccw.data.NewsPapers;
-import org.d.ccw.factory.Parserino;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DelfiParse implements CCWParser, Parserino {
+public class DelfiParse implements CCWParser {
 
 //	public static final String ART_URL_START = "https://www.delfi.lt";
 
@@ -85,9 +83,9 @@ public class DelfiParse implements CCWParser, Parserino {
 		return result;
 	}
 
-NewsReader read = new NewsReader();
-	@Override
-	public void parse() {
-		System.out.println(read.generateWithContent(NewsPapers.DELFI));
-	}
+//NewsReader read = new NewsReader();
+//	@Override
+//	public void parse() {
+//		System.out.println(read.generateWithContent(NewsPapers.DELFI));
+//	}
 }

@@ -9,7 +9,7 @@ class DelfiParseTest {
     public void checkingFinalRez() {
         NewsReader reader = new NewsReader();
 
-String availablePage =reader.generateWithContent(NewsPapers.BBC);
+//String availablePage =reader.generateWithContent(NewsPapers.BBC);
 //Assert.assertEquals(NewsPapers.DELFI,availablePage.());
 
 

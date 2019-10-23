@@ -8,7 +8,7 @@ import org.d.ccw.factory.Parserino;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LRytasParse implements CCWParser, Parserino {
+public class LRytasParse implements CCWParser {
 
     @Override
     public String targetPage() {
@@ -22,10 +22,8 @@ public class LRytasParse implements CCWParser, Parserino {
         return new ArrayList<ArticleMetaData>();
     }
 
-    NewsReader read = new NewsReader();
-
-    @Override
-    public void parse() {
-        System.out.println(read.generateWithContent(NewsPapers.LRYTAS));
-    }
+//    @Override
+//    public void parse() {
+//        System.out.println(read.generateWithContent(NewsPapers.LRYTAS));
+//    }
 }
